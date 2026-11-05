@@ -1,0 +1,21 @@
+@use 'sass:math';
+@use 'sass:meta';
+@use 'breakpoints';
+
+$rem-size: 16px;
+
+@function px-to-rem($value, $base: $rem-size) {
+  @return #{math.div($value, $base)}rem;
+}
+
+// How to use the clamp calc: Pass along your mobile font size as the first value.
+// Your second value should be your desktop font size.
+@function calc-clamp($min-size, $max-size) {
+  $slope: math.div($max-size - $min-size, breakpoints.$xl - breakpoints.$xs);
+  $slope-to-unit: $slope * 100vw;
+  $preferred-size-rem: px-to-rem($min-size - $slope * breakpoints.$xs);
+  $min-size-rem: px-to-rem($min-size);
+  $max-size-rem: px-to-rem($max-size);
+
+  @return clamp(#{$min-size-rem}, calc(#{$preferred-size-rem} + #{$slope-to-unit}), #{$max-size-rem});
+}

@@ -1,0 +1,72 @@
+:root {
+  // Base color channels — used to derive transparent/opacity variants
+  --rgb-primary: 249 32 80;
+  --rgb-action: 59 130 246;
+
+  // Colors
+  --black: #000000;
+  --white: #ffffff;
+  --c-primary: rgb(var(--rgb-primary));
+  --c-primary-transparent: rgb(var(--rgb-primary) / 0.5);
+  --c-surface: #f0f0f0;
+  --c-surface-raised: #ffffff;
+  --c-border-subtle: #e2e6ea;
+  --c-text-primary: #1b1b1b;
+  --c-text-muted: #7a7a7a;
+  --c-text-placeholder: #98a0ad;
+
+  // Surface variants
+  --c-surface-subtle: #f6f6f6;
+  --c-surface-hover: #fafbfc;
+  --c-primary-surface: #fff0f3;
+  --c-primary-hover: #e01145;
+
+  // Borders
+  --c-border: #e5e5e5;
+
+  // Action blue
+  --c-action: rgb(var(--rgb-action));
+  --c-action-hover: #2563eb;
+
+  // Status colors
+  --c-danger: #b91c1c;
+  --c-danger-surface: #fde2e2;
+  --c-warning: #b45309;
+  --c-warning-surface: #ffeac7;
+  --c-success: #15803d;
+  --c-success-surface: #dcfce7;
+  --c-info: #1d4ed8;
+  --c-info-surface: #dbe8ff;
+  --c-progress: #a16207;
+  --c-progress-surface: #fff0b3;
+  --c-offer: #5b21b6;
+  --c-offer-surface: #ddd6fe;
+
+  // Sidebar (dark theme)
+  --c-sidebar-bg: #1a1a1a;
+  --c-sidebar-border: #2a2a2a;
+  --c-sidebar-hover: #222222;
+  --c-sidebar-active-bg: #3b1b22;
+  --c-sidebar-text-muted: #898989;
+  --c-sidebar-text-secondary: #dddddd;
+
+  // Kanban column backgrounds
+  --c-kanban-nieuw: #f4f7ff;
+  --c-kanban-voortgang: #fff9e6;
+  --c-kanban-doorgestuurd: #fff3e6;
+  --c-kanban-afgewezen: #fff1f2;
+  --c-kanban-aangenomen: #eefcf4;
+
+  // Border radius
+  --radius-circle: 50%;
+
+  // Shadows
+  --shadow-sm: 0 1px 3px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 2px 8px rgb(0 0 0 / 0.3);
+  --shadow-lg: 0 12px 24px -8px rgb(16 24 40 / 0.12);
+  --shadow-xl: 0 20px 60px rgb(15 23 42 / 0.08);
+  --shadow-focus: 0 0 0 3px rgb(var(--rgb-action) / 0.1);
+
+  // Fonts
+  --font-primary: 'Arial', sans-serif;
+}

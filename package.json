@@ -1,0 +1,94 @@
+{
+  "name": "recruitment-portal-code-sample",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "lint-staged",
+    "lint-all": "tsc && eslint . && prettier --check . && stylelint \"src/**/*.scss\"",
+    "preview": "vite preview",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@indicia/component-library": "^7.0.1",
+    "@progress/kendo-data-query": "^1.7.2",
+    "@progress/kendo-drawing": "^1.21.2",
+    "@progress/kendo-licensing": "^1.7.2",
+    "@progress/kendo-react-animation": "13.2.0",
+    "@progress/kendo-react-buttons": "13.2.0",
+    "@progress/kendo-react-common": "13.2.0",
+    "@progress/kendo-react-data-tools": "13.2.0",
+    "@progress/kendo-react-dateinputs": "13.2.0",
+    "@progress/kendo-react-dialogs": "13.2.0",
+    "@progress/kendo-react-dropdowns": "13.2.0",
+    "@progress/kendo-react-excel-export": "13.2.0",
+    "@progress/kendo-react-form": "13.2.0",
+    "@progress/kendo-react-grid": "13.2.0",
+    "@progress/kendo-react-indicators": "13.2.0",
+    "@progress/kendo-react-inputs": "13.2.0",
+    "@progress/kendo-react-intl": "13.2.0",
+    "@progress/kendo-react-labels": "13.2.0",
+    "@progress/kendo-react-layout": "13.2.0",
+    "@progress/kendo-react-popup": "13.2.0",
+    "@progress/kendo-svg-icons": "^4.0.0",
+    "@progress/kendo-webspeech-common": "^1.0.1",
+    "@progress/kendo-theme-default": "^12.3.0",
+    "@tanstack/react-query": "^5.90.12",
+    "@tanstack/react-query-devtools": "^5.91.1",
+    "axios": "^1.13.2",
+    "classnames": "^2.5.1",
+    "i18next": "^25.7.3",
+    "normalize.css": "^8.0.1",
+    "phosphor-react": "^1.4.1",
+    "react": "^19.2.3",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-dom": "^19.2.3",
+    "react-i18next": "^16.5.0",
+    "react-router": "^7.10.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@indicia/eslint-config": "^1.0.1",
+    "@tanstack/eslint-plugin-query": "^5.91.2",
+    "@trivago/prettier-plugin-sort-imports": "^6.0.0",
+    "@types/node": "^24.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^5.1.2",
+    "eslint": "^9.39.2",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.25",
+    "globals": "^16.5.0",
+    "husky": "^9.1.7",
+    "json-diff": "^1.0.6",
+    "lint-staged": "^16.2.7",
+    "msw": "^2.13.3",
+    "prettier": "^3.7.4",
+    "sass-embedded": "^1.97.0",
+    "stylelint": "^16.26.1",
+    "stylelint-config-standard-scss": "^16.0.0",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.50.0",
+    "vite": "^7.3.0"
+  },
+  "lint-staged": {
+    "**/*.{js,ts,tsx,scss,css,json}": [
+      "prettier --write",
+      "eslint --fix --max-warnings=0 --no-warn-ignored"
+    ],
+    "**/*.{scss,css}": [
+      "stylelint --fix"
+    ],
+    "translations/*.json": [
+      "node translation-diff.js"
+    ]
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
+  }
+}

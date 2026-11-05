@@ -1,0 +1,69 @@
+.iconBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  background: none;
+  color: inherit;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &--ghost {
+    border-radius: 6px;
+    padding: 0.35rem;
+
+    &:hover:not(:disabled) {
+      background-color: rgb(0 0 0 / 0.06);
+    }
+  }
+
+  &--toggle {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--c-border-subtle);
+    border-radius: 10px;
+    background: var(--white);
+    color: var(--c-text-muted);
+
+    &:hover:not(:disabled) {
+      background-color: var(--c-surface-subtle);
+    }
+
+    &--active {
+      background: var(--c-primary);
+      border-color: var(--c-primary);
+      color: var(--white);
+
+      &:hover:not(:disabled) {
+        background-color: var(--c-primary-hover);
+        border-color: var(--c-primary-hover);
+      }
+    }
+  }
+
+  &--round {
+    width: 24px;
+    height: 24px;
+    border-radius: var(--radius-circle);
+    background-color: var(--c-primary);
+    color: var(--white);
+    box-shadow: var(--shadow-md);
+
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+
+    &:hover:not(:disabled) {
+      background-color: var(--c-primary-hover);
+    }
+  }
+}

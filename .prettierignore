@@ -1,0 +1,25 @@
+# Configurations
+**/.git
+.husky
+.idea
+.vscode
+.stylelintignore
+
+# Dependency directories
+certificates
+node_modules
+
+# Output directories
+coverage
+dist
+
+# Config files
+**/*.yml
+**/*.md
+.eslintrc.json
+.prettierrc.json
+.stylelintrc.json
+tsconfig.json
+*.config.ts
+.env.*
+package*.json

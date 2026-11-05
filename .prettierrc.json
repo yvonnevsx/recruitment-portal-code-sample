@@ -1,0 +1,19 @@
+{
+  "semi": true,
+  "trailingComma": "es5",
+  "singleQuote": true,
+  "singleAttributePerLine": true,
+  "printWidth": 120,
+  "importOrder": [
+    "<THIRD_PARTY_MODULES>",
+    "normalize\\.css$",
+    "^@(indicia)/(.*)$",
+    "^@(progress)/(.*)$",
+    "^@(actions|components|features|fonts|global-types|hooks|services|styling|utils)/(.*)$",
+    "^[./*](?!.*\\.(css|scss)$).*$",
+    ".*\\.(css|scss)$"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "plugins": ["@trivago/prettier-plugin-sort-imports"]
+}

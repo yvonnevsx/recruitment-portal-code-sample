@@ -1,0 +1,143 @@
+.wrapper {
+  width: 100%;
+}
+
+.grid {
+  width: 100%;
+  display: block;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.grid :global(.k-grid) {
+  width: 100%;
+  border: 1px solid var(--c-border-subtle);
+  background-color: var(--white);
+  color: var(--c-text-primary);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.grid :global(.k-grid-table) {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.grid :global(.k-grid-header-wrap),
+.grid :global(.k-grid-content) {
+  width: 100%;
+}
+
+.grid :global(.k-grid-header) {
+  background-color: var(--c-surface-subtle);
+}
+
+.grid :global(.k-grid-header th) {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #2c3a4b;
+  letter-spacing: 0.01em;
+  border-bottom: 1px solid var(--c-border-subtle);
+}
+
+.grid :global(.k-grid td),
+.grid :global(.k-grid th) {
+  padding: 0.9rem 1.25rem;
+}
+
+.grid :global(.k-grid-content tr + tr td) {
+  border-top: 1px solid var(--c-border-subtle);
+}
+
+.grid :global(.k-grid-content tr:hover) td {
+  background: var(--c-surface-hover);
+}
+
+.grid :global(.k-grid-header th + th),
+.grid :global(.k-grid td + td) {
+  border-left: 1px solid var(--c-border-subtle);
+}
+
+.nameCell {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 600;
+  color: var(--c-text-primary);
+}
+
+.nameText {
+  font-weight: 600;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-circle);
+  background: var(--c-danger-surface);
+  color: var(--c-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.02em;
+}
+
+.statusCell {
+  white-space: nowrap;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.7rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.statusNew {
+  background: var(--c-info-surface);
+  color: var(--c-info);
+}
+
+.statusForwarded {
+  background: var(--c-warning-surface);
+  color: var(--c-warning);
+}
+
+.statusInProgress {
+  background: var(--c-progress-surface);
+  color: var(--c-progress);
+}
+
+.statusRejected {
+  background: var(--c-danger-surface);
+  color: var(--c-danger);
+}
+
+.statusAccepted {
+  background: var(--c-success-surface);
+  color: var(--c-success);
+}
+
+.grid :global(.k-pager) {
+  padding: 0.75rem 1.25rem;
+  border-top: 1px solid var(--c-border-subtle);
+  background: var(--white);
+}

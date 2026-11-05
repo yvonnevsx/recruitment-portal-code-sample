@@ -1,0 +1,12 @@
+{
+  "extends": "stylelint-config-standard-scss",
+  "rules": {
+    "color-hex-length": "long",
+    "selector-class-pattern": null,
+    "declaration-block-no-redundant-longhand-properties": null,
+    "alpha-value-notation": "number",
+    "media-feature-range-notation": "prefix",
+    "selector-pseudo-class-no-unknown": [true, { "ignorePseudoClasses": ["global"] }],
+    "no-empty-source": null
+  }
+}

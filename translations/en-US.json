@@ -1,0 +1,92 @@
+{
+  "generic": {
+    "appName": "Recruitment Portal"
+  },
+  "components": {
+    "sidebar": {
+      "expand": "Expand",
+      "collapse": "Collapse",
+      "logout": "Log out"
+    },
+    "recruitmentGrid": {
+      "loading": "Loading...",
+      "search": "Search candidates",
+      "filterAllStatuses": "All statuses",
+      "filterAllVacancies": "All vacancies",
+      "filterStatusLabel": "Filter by status",
+      "filterVacancyLabel": "Filter by vacancy",
+      "columns": {
+        "name": "Name",
+        "vacancy": "Vacancy",
+        "status": "Status",
+        "assignedTo": "Assigned to",
+        "date": "Date"
+      }
+    },
+    "viewToggle": {
+      "listView": "Show list view",
+      "gridView": "Show grid view"
+    }
+  },
+  "features": {
+    "pages": {
+      "candidates": "Candidates",
+      "candidate": "Candidate"
+    },
+    "auth": {
+      "login": {
+        "brandLabel": "ATS",
+        "title": "Log in",
+        "subtitle": "Continue with your secured ATS session.",
+        "devMode": "Dev mode",
+        "loginAsAdmin": "Log in as admin",
+        "footer": "By logging in you agree to the secure use of your ATS session."
+      },
+      "callback": {
+        "invalidState": "Invalid authentication state. Please try logging in again.",
+        "failed": "Login failed.",
+        "retry": "Try again",
+        "exchangingToken": "Exchanging token...",
+        "loggingIn": "Logging in..."
+      },
+      "forbidden": {
+        "title": "Access denied",
+        "description": "You don't have permission to view this page.",
+        "back": "Go back"
+      }
+    },
+    "kandidaten": {
+      "kanban": {
+        "noCandidates": "No candidates"
+      },
+      "detail": {
+        "loading": "Loading...",
+        "notFound": "Application not found",
+        "error": "Something went wrong while loading the application",
+        "sections": {
+          "generalInfo": "General info",
+          "statusAndProcess": "Status & Process",
+          "notes": "Notes"
+        },
+        "fields": {
+          "email": "Email",
+          "phone": "Phone",
+          "linkedin": "LinkedIn",
+          "linkedinProfile": "Profile",
+          "appliedAt": "Application date",
+          "status": "Status",
+          "assignedTo": "Assigned to",
+          "notAssigned": "Not assigned",
+          "lastModified": "Last modified"
+        },
+        "notes": {
+          "loading": "Loading...",
+          "empty": "No notes",
+          "placeholder": "New note...",
+          "add": "Add note",
+          "saving": "Saving..."
+        }
+      }
+    }
+  }
+}

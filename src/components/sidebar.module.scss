@@ -1,0 +1,209 @@
+@use '@styles/utils';
+
+.sidebar {
+  background-color: var(--c-sidebar-bg);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  min-height: 100vh;
+  flex-shrink: 0;
+  position: relative;
+  transition: width 0.3s ease;
+
+  &--collapsed {
+    width: 80px;
+  }
+}
+
+// ─── Toggle Button ─────────────────────────────────────────────────────────
+
+.toggleBtn {
+  position: absolute;
+  right: -12px;
+  top: 2rem;
+  z-index: 10;
+}
+
+// ─── Logo ──────────────────────────────────────────────────────────────────
+
+.logo {
+  padding: 2rem 2rem 1.5rem;
+  border-bottom: 1px solid var(--c-sidebar-border);
+
+  .sidebar--collapsed & {
+    padding: 1.5rem 1rem;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.logoText {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+// ─── Nav ───────────────────────────────────────────────────────────────────
+
+.nav {
+  flex: 1;
+  padding-block: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.navIcon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--nav-icon-color);
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.1rem 2rem;
+  font-size: 1.05rem;
+  color: var(--c-sidebar-text-muted);
+
+  --nav-icon-color: var(--c-sidebar-text-muted);
+
+  text-decoration: none;
+  transition:
+    color 0.15s,
+    background-color 0.15s;
+  position: relative;
+
+  .sidebar--collapsed & {
+    justify-content: center;
+    padding-inline: 0;
+  }
+
+  &:hover {
+    color: var(--white);
+    background-color: var(--c-sidebar-hover);
+
+    --nav-icon-color: var(--white);
+  }
+
+  &--active {
+    background-color: var(--c-sidebar-active-bg);
+    color: var(--white);
+
+    --nav-icon-color: var(--c-primary);
+
+    &:hover {
+      background-color: var(--c-sidebar-active-bg);
+    }
+  }
+}
+
+.navLabel {
+  .sidebar--collapsed & {
+    display: none;
+  }
+}
+
+// ─── Tooltip (collapsed state) ─────────────────────────────────────────────
+
+.tooltip {
+  position: absolute;
+  left: calc(100% + 1rem);
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--c-sidebar-border);
+  color: var(--white);
+  padding: 0.4rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.15s,
+    visibility 0.15s;
+  z-index: 50;
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 5px solid transparent;
+    border-right-color: var(--c-sidebar-border);
+  }
+
+  .navLink:hover & {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+// ─── User Info ─────────────────────────────────────────────────────────────
+
+.userInfo {
+  padding: 1.5rem 2rem;
+  border-top: 1px solid var(--c-sidebar-border);
+
+  .sidebar--collapsed & {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.userNameRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.userName {
+  font-size: 1rem;
+  color: var(--white);
+  margin: 0;
+}
+
+.logoutBtn {
+  color: var(--c-sidebar-text-secondary);
+  flex-shrink: 0;
+
+  &:hover:not(:disabled) {
+    color: var(--white);
+  }
+}
+
+.userRole {
+  font-size: 0.8rem;
+  color: var(--c-sidebar-text-muted);
+  margin: 0.2rem 0 0;
+}
+
+.userAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-circle);
+  background-color: var(--c-primary-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: default;
+
+  span {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--c-primary);
+  }
+
+  &:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
+}

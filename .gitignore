@@ -1,0 +1,43 @@
+# IDE Files
+.idea
+.vscode
+!.vscode/extensions.json
+
+# Installed libraries
+node_modules
+
+# Build output
+dist
+public/mockServiceWorker.js
+*.tgz
+
+# Logs
+logs
+*.log
+*.log*
+
+# npm
+.npmrc
+
+# local env files
+.env
+.env.*
+.env*.local
+!.env.example
+
+# licenses / secrets
+.telerik-license.txt
+telerik-license.txt
+*.pem
+*.key
+
+# typescript
+*.tsbuildinfo
+auth.json
+certs
+
+vite.config.d.ts
+vite.config.js
+
+# lockfile (bevat URLs van een private package registry)
+package-lock.json

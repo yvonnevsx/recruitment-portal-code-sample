@@ -1,0 +1,92 @@
+{
+  "generic": {
+    "appName": "Recruitment Portal"
+  },
+  "components": {
+    "sidebar": {
+      "expand": "Uitklappen",
+      "collapse": "Inklappen",
+      "logout": "Uitloggen"
+    },
+    "recruitmentGrid": {
+      "loading": "Laden...",
+      "search": "Zoek kandidaten",
+      "filterAllStatuses": "Alle statussen",
+      "filterAllVacancies": "Alle vacatures",
+      "filterStatusLabel": "Filter op status",
+      "filterVacancyLabel": "Filter op vacature",
+      "columns": {
+        "name": "Naam",
+        "vacancy": "Vacature",
+        "status": "Status",
+        "assignedTo": "Toegewezen aan",
+        "date": "Datum"
+      }
+    },
+    "viewToggle": {
+      "listView": "Toon lijstweergave",
+      "gridView": "Toon gridweergave"
+    }
+  },
+  "features": {
+    "pages": {
+      "candidates": "Kandidaten",
+      "candidate": "Kandidaat"
+    },
+    "auth": {
+      "login": {
+        "brandLabel": "ATS",
+        "title": "Inloggen",
+        "subtitle": "Ga verder met je beveiligde ATS sessie.",
+        "devMode": "Dev modus",
+        "loginAsAdmin": "Inloggen als admin",
+        "footer": "Door in te loggen ga je akkoord met het beveiligde gebruik van je ATS sessie."
+      },
+      "callback": {
+        "invalidState": "Ongeldige authenticatiestatus. Probeer opnieuw in te loggen.",
+        "failed": "Inloggen mislukt.",
+        "retry": "Probeer opnieuw",
+        "exchangingToken": "Token wordt uitgewisseld...",
+        "loggingIn": "Bezig met inloggen..."
+      },
+      "forbidden": {
+        "title": "Geen toegang",
+        "description": "Je hebt geen rechten om deze pagina te bekijken.",
+        "back": "Ga terug"
+      }
+    },
+    "kandidaten": {
+      "kanban": {
+        "noCandidates": "Geen kandidaten"
+      },
+      "detail": {
+        "loading": "Laden...",
+        "notFound": "Sollicitatie niet gevonden",
+        "error": "Er ging iets mis bij het ophalen van de sollicitatie",
+        "sections": {
+          "generalInfo": "Algemene info",
+          "statusAndProcess": "Status & Proces",
+          "notes": "Notities"
+        },
+        "fields": {
+          "email": "Email",
+          "phone": "Telefoon",
+          "linkedin": "LinkedIn",
+          "linkedinProfile": "Profiel",
+          "appliedAt": "Sollicitatie datum",
+          "status": "Status",
+          "assignedTo": "Toegewezen aan",
+          "notAssigned": "Niet toegewezen",
+          "lastModified": "Laatst gewijzigd"
+        },
+        "notes": {
+          "loading": "Laden...",
+          "empty": "Geen notities",
+          "placeholder": "Nieuwe notitie...",
+          "add": "Notitie toevoegen",
+          "saving": "Opslaan..."
+        }
+      }
+    }
+  }
+}
